@@ -1,0 +1,171 @@
+body{
+    margin:0px;
+    background-image: url(/images/math.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+:root{
+    --primary:#efebdf;
+    --secondary:#9f9398;
+    --heading:#3c3b37;
+    --keyColor:#9c8f96;
+    --funColor:#bf9684;
+    --speColor:#b1a593;
+}
+#frame{
+    height:500px;
+    width:400px;
+    background-color:var(--primary);
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 500px){
+    #frame{
+        margin-top: 10vh;
+        height:70vh;
+        width:80vw;
+        overflow: hidden;
+    }
+}
+@media screen and (max-height: 650px){
+    #frame{
+        margin-top: 2vh;
+        height:80vh;
+        width:90vw;
+        overflow: hidden;  
+    }
+}
+.logo{
+    height:20px;
+    width:20px;
+}
+#top{
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:10%;
+    background-color:var(--heading);
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#top h3{
+    color:white;
+    align-self:center;
+}
+#close{
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+#open{
+    position:absolute;
+    top:5px;
+    left:5px !important;
+    display: none;
+}
+#cal-body{
+    width:98%;
+    height:88%;
+    padding:1%;
+    display:grid;
+    grid-template-columns: repeat(4);
+    grid-auto-rows: minmax(35px, auto);
+    gap:5px;
+}
+#screen{
+    grid-column: span 4;
+    grid-row: span 2;
+    padding:15px;
+}
+#lcd{
+    height:98%;
+    width:98%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border:solid red 1px;
+    background-color: white;
+    padding:3px;
+    font-size:2rem;
+    overflow: hidden;
+}
+.keys{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:solid green 1px;
+    border-radius: 5%;
+    background-color: var(--keyColor);
+    cursor: pointer;
+}
+.fkey{
+    background-color: var(--funColor);
+}
+.skey{
+    background-color: var(--speColor);
+}
+#zero{
+    grid-column: span 2;
+    order:17;
+}
+#one{
+    order:13;
+}
+#two{
+    order:14;
+}
+#three{
+    order:15;
+}
+#four{
+    order:9;
+}
+#five{
+    order:10;
+}
+#six{
+    order:11;
+}
+#seven{
+    order:5;
+}
+#eight{
+    order:6;
+}
+#nine{
+    order:7;
+}
+#add{
+    order:16;
+}
+#sub{
+    order:12;
+}
+#mul{
+    order:8;
+}
+#div{
+    order:4;
+}
+#per{
+    order:3;
+}
+#dot{
+    order:18;
+}
+#equal{
+    order:19;
+    background-color: rgb(231, 123, 83);
+}
+#ac{
+    order:1;
+}
+#del{
+    order:2;
+}
